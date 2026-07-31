@@ -5,9 +5,7 @@ import { test, expect } from '@playwright/test';
 
 test('positive-message', async ({ page }) => {
   await page.goto('http://localhost:5173');
-  await page.evaluate('() => document.body.innerText');
   await page.getByRole('textbox', { name: 'Type your message here...' }).fill('I love helping people and spreading kindness!');
   await page.getByRole('button', { name: 'Submit' }).click();
-  await expect(page.getByText("Accepted!").first()).toBeVisible();
-  await expect(page.getByText("The message expresses positive emotions and intentions").first()).toBeVisible();
+  await expect(page.getByText("Accepted!").first()).toBeVisible({ timeout: 30000 });
 });

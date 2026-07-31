@@ -85,6 +85,16 @@ Automated browser tests were recorded using the Playwright MCP tooling. These sp
 | Positive message | [`positive-message.spec.ts`](frontend/.tsupgrader/runtime-validation/playwright-scripts/positive-message.spec.ts) | Submits a kind message, asserts "Accepted!" is displayed |
 | Negative message | [`negative-message.spec.ts`](frontend/.tsupgrader/runtime-validation/playwright-scripts/negative-message.spec.ts) | Submits a negative message, asserts rejection with reason and suggested rewrite |
 
+### Test Recordings
+
+**Positive message flow:**
+
+https://github.com/LeonardoBonacci/be-positive/raw/main/docs/videos/positive-message.mp4
+
+**Negative message flow:**
+
+https://github.com/LeonardoBonacci/be-positive/raw/main/docs/videos/negative-message.mp4
+
 ### Running
 
 ```bash

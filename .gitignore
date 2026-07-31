@@ -57,6 +57,7 @@ dist/
 
 # Test artifacts
 test-result.png
+test-results/
 
 # Python
 __pycache__/

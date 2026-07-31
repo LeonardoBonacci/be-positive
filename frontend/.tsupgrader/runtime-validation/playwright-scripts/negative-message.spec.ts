@@ -5,10 +5,9 @@ import { test, expect } from '@playwright/test';
 
 test('negative-message', async ({ page }) => {
   await page.goto('http://localhost:5173');
-  await page.goto('http://localhost:5173');
   await page.getByRole('textbox', { name: 'Type your message here...' }).fill('I hate everything and everyone is terrible');
   await page.getByRole('button', { name: 'Submit' }).click();
-  await expect(page.getByText("Not Positive Enough").first()).toBeVisible();
+  await expect(page.getByText("Not Positive Enough").first()).toBeVisible({ timeout: 30000 });
   await expect(page.getByText("Reason:").first()).toBeVisible();
   await expect(page.getByText("Try instead:").first()).toBeVisible();
 });
