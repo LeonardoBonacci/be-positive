@@ -89,11 +89,11 @@ Automated browser tests were recorded using the Playwright MCP tooling. These sp
 
 **Positive message flow:**
 
-https://github.com/LeonardoBonacci/be-positive/raw/main/docs/videos/positive-message.mp4
+<video src="https://github.com/LeonardoBonacci/be-positive/raw/main/docs/videos/positive-message.mp4" controls autoplay muted loop width="600"></video>
 
 **Negative message flow:**
 
-https://github.com/LeonardoBonacci/be-positive/raw/main/docs/videos/negative-message.mp4
+<video src="https://github.com/LeonardoBonacci/be-positive/raw/main/docs/videos/negative-message.mp4" controls autoplay muted loop width="600"></video>
 
 ### Running
 
