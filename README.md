@@ -65,3 +65,30 @@ The goal is for people to walk away thinking:
 Because the best way to learn AI-assisted software engineering isn't to read about it.
 
 It's to open an editor, start prompting, break a few things, and build something.
+
+---
+
+## Recorded Playwright Tests
+
+Automated browser tests were recorded using the Playwright MCP tooling. These specs live in the frontend project and can be replayed with `npx playwright test`.
+
+### Prerequisites
+
+- Backend running: `cd bepositive && ./mvnw spring-boot:run`
+- Frontend running: `cd frontend && npm run dev`
+- Ollama running with `qwen3:8b`
+
+### Test Flows
+
+| Flow | File | What it tests |
+|------|------|---------------|
+| Positive message | [`positive-message.spec.ts`](frontend/.tsupgrader/runtime-validation/playwright-scripts/positive-message.spec.ts) | Submits a kind message, asserts "Accepted!" is displayed |
+| Negative message | [`negative-message.spec.ts`](frontend/.tsupgrader/runtime-validation/playwright-scripts/negative-message.spec.ts) | Submits a negative message, asserts rejection with reason and suggested rewrite |
+
+### Running
+
+```bash
+cd frontend
+npx playwright install chromium
+npx playwright test .tsupgrader/runtime-validation/playwright-scripts/
+```

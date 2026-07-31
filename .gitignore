@@ -47,3 +47,17 @@ Thumbs.db
 
 # Environment
 .env
+
+# Node
+node_modules/
+dist/
+
+# Playwright MCP
+.playwright-mcp/
+
+# Test artifacts
+test-result.png
+
+# Python
+__pycache__/
+*.pyc
